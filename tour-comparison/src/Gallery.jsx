@@ -9,7 +9,7 @@ const Gallery = () => {
     useEffect(() => { //Effect runs once when component fetches tour data
         const fetchToursData = async () => {
             try {
-                const response = await fetch("https://course-api.com/react-tours-project"); //Fetch API URL
+                const response = await fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://course-api.com/react-tours-project')); //Fetch API URL
                 if (!response.ok) {
                     throw new Error("Failed to fetch tours."); //Error message if fetching fails
                 }
